@@ -3,6 +3,13 @@
 mods_dir=/etc/puppet/modules
 cd $mods_dir
 
+###############################################################################
+# IMPORTANT: please edit this branch name to the version of the Azure         #
+#            adaptation that you want to install on every Puppet module       #
+###############################################################################
+git_branch="azure-beta1"
+
+
 ##########################################
 # need to be root
 ##########################################
@@ -54,13 +61,14 @@ fi
 # export scientific_python puppet module
 ##########################################
 
-git_loc="${git_url}/hysds/puppet-scientific_python"
+git_loc="${git_url}/earthobservatory/puppet-scientific_python"
+
 mod_dir=$mods_dir/scientific_python
 site_pp=$mod_dir/site.pp
 
 # check that module is here; if not, export it
 if [ ! -d $mod_dir ]; then
-  $git_cmd clone $git_loc $mod_dir
+  $git_cmd clone -b $git_branch --single-branch $git_loc $mod_dir
 fi
 
 
