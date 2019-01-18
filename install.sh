@@ -62,7 +62,6 @@ fi
 ##########################################
 
 git_loc="${git_url}/earthobservatory/puppet-scientific_python"
-
 mod_dir=$mods_dir/scientific_python
 site_pp=$mod_dir/site.pp
 
