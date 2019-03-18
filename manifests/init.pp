@@ -74,17 +74,6 @@ class scientific_python inherits hysds_dev {
 
 
   #####################################################
-  # link sciflo data area
-  #####################################################
-  file { '/data':
-    ensure  => directory,
-    owner   => $user,
-    group   => $group,
-    mode    => 0775,
-  }
-
-
-  #####################################################
   # start docker service
   #####################################################
 
