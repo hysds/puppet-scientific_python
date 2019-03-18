@@ -40,6 +40,7 @@ node 'default' {
   Stage['pre'] -> Stage[main] -> Stage['post']
 
   # modules
+  include hysds_base
   include scientific_python
 
 }
