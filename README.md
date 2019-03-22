@@ -11,5 +11,5 @@ Create a base CentOS7 image as described [here](https://github.com/hysds/hysds-f
 As _root_ run:
 
 ```sh
-bash < <(curl -skL https://github.com/earthobservatory/puppet-scientific_python/raw/azure-beta1/install.sh)
+bash < <(curl -skL https://github.com/hysds/puppet-scientific_python/raw/azure/install.sh)
 ```
